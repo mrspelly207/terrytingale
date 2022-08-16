@@ -1,1 +1,7 @@
--- shity
+-- non functional
+-- function vowel(n)
+--   str = tostring(n)
+--   if string.find (n, a [, init [, plain]]) or string.find (n, b [, init [, plain]]) or
+--   end
+--   return fue
+-- end
