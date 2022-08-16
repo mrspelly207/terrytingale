@@ -29,7 +29,7 @@ print("")
 print ("3). Mendeteksi Palindrom") -- minta input dan judul masalah
 io.write ("input : ")
 
-input = tostring(io.read()) -- pembersihan input agar string
+input = string.lower(tostring(io.read())) -- pembersihan input agar string
 if (input == string.reverse(input)) == true --penyelesaian
   then
     print ("kalimat anda termasuk Palindrom") -- print jawaban jika palindrom
