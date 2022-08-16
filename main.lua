@@ -1,1 +1,1 @@
-dofile("soal-dasar.lua")
+dofile("soal-dasar.lua") --open the current assignment
