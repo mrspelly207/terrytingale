@@ -1,7 +1,7 @@
 -- non functional
--- function vowel(n)
---   str = tostring(n)
---   if string.find (n, a [, init [, plain]]) or string.find (n, b [, init [, plain]]) or
---   end
---   return fue
--- end
+print ('ayooooo, mau cek vowel ya ?? tulis dibawah!!')
+io.write ("input lo : ")
+input = tostring(io.read())
+print(#(input:gsub("[^aiueo]","")))
+
+
