@@ -5,7 +5,7 @@ io.write ("input : ")
 input = tostring(io.read()) -- pembersihan input agar string
 io.write("")
 io.write("ada ")
-io.write (#(input:gsub("[^aiueo]",""))) -- penyelesaian sekalian print
+io.write (#(input:gsub("[^aiueoAIUEO]",""))) -- penyelesaian sekalian print
 print(" huruf vokal di kalimat anda !!")
 print("")
 
