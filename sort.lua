@@ -13,7 +13,7 @@ a = t
 local function bubblesort(a)
   repeat
     local swapped = false
-    for i = 2, table.getn(a) do
+    for i = 2, #a do
       if tonumber(a[i - 1]) > tonumber(a[i]) then
         a[i], a[i - 1] = a[i - 1], a[i]
         swapped = true
