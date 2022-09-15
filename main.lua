@@ -1,1 +1,1 @@
-dofile("soal-dasar.lua") --open the current assignment
+dofile("sort.lua") --open the current assignment
