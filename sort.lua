@@ -1,4 +1,4 @@
-io.write('inputkan angka tidak berurutan, disipah dengan koma dan spasi')
+io.write('inputkan angka tidak berurutan, disipah dengan spasi')
 print("")
 io.write('Input: ')
 
