@@ -9,7 +9,7 @@ for number in string.gmatch(s, "[^%s]+") do
     table.insert(t, number)
 end
 
-a = t
+
 local function bubblesort(a)
   repeat
     local swapped = false
@@ -26,18 +26,18 @@ end
 
 print("")
 print('blum sort')
-for key, val in pairs(a) do
+for key, val in pairs(t) do
     io.write(' '..val)
 end
 print('')
 
 
 
-bubblesort(a)
+bubblesort(t)
 
 print("")
 print('sortir urut dari terkecil ke terbesar')
-for key, val in pairs(a) do
+for key, val in pairs(t) do
     io.write(' '..val)
 end
 print("")
