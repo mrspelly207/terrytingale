@@ -52,7 +52,55 @@ io.write("    Jumlah Populasi: ")
 print(size1)
 
 print("2. Rata-rata")
-sum = 2
+sum = 2 -- sum is not true, i havent solution yet
 rata = sum / size1
 io.write("    Mean: ")
 print(rata)
+
+print("3. Maksimum")
+io.write("    Max: ")
+max = t[size1]
+print(max)
+
+print("4. Minimum")
+min =t[1]
+io.write("    Min: ")
+print(min)
+
+print("5. Modus")
+sum = 2 -- sum is not true, i havent solution yet
+rata = sum / size1
+io.write("    Modus: ")
+print(rata)
+
+print("6. Median")
+if (size1 % 2) == (0) then -- penyelesaian dengan melakukan modulo
+    halfy1 = (size1 / 2)
+    halfy2 = (size1 / 2) + 1
+    median = t[halfy1] + ((t[halfy2] - t[halfy1]) / 2)
+    else
+    halfy = (size1 + 1) / 2
+    median = t[halfy]
+end
+io.write("    Median: ")
+print(median)
+
+print("7. Q1, Q2, Q3")
+
+    quart1 = (size1 + 1) / 4
+    quart3 = (size1 + 1) / 4 * 3
+    if (quart1 % 2) == (0) then -- penyelesaian dengan melakukan modulo
+        Q1 = t[quart1]
+        Q3 = t[quart3]
+        else
+        Q1 = "fucked"
+        Q3 = "fucked"
+    end
+    
+
+io.write("    Q1: ")
+print(Q1, "                      DEBUG:", quart1)
+io.write("    Q2: ")
+print(median)
+io.write("    Q2: ")
+print(Q3, "                      DEBUG:", quart3)
