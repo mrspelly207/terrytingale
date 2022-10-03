@@ -1,1 +1,1 @@
-dofile("sort.lua") --open the current assignment
+dofile("statistics.lua") --open the current assignment
