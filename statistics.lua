@@ -73,21 +73,19 @@ print(min)
 
 print("5. Modus")
 local counts = {}
-	for _,v in pairs(t) do
-		counts[v] = counts[v] and counts[v] + 1 or 1
-	end
-	local modes = {}
-	local modeCount = 0
-	for k,v in pairs(counts) do
-		if v > modeCount then
-			modeCount = v
-			modes = {k}
-		elseif v == modeCount then
-			table.insert(modes, k)
-		end
-	end
-sum = 2 -- sum is not true, i havent solution yet
-rata = sum / size1
+for _, v in pairs(t) do
+  counts[v] = counts[v] and counts[v] + 1 or 1
+end
+local modes = {}
+local modeCount = 0
+for k, v in pairs(counts) do
+  if v > modeCount then
+    modeCount = v
+    modes = { k }
+  elseif v == modeCount then
+    table.insert(modes, k)
+  end
+end
 io.write("    Modus: ")
 for key, val in pairs(modes) do
   io.write(val .. ', ')
@@ -95,33 +93,63 @@ end
 print("")
 
 print("6. Median")
-if (size1 % 2) == (0) then -- penyelesaian dengan melakukan modulo
+if ((size1 - 1) % 2) == (0) then -- penyelesaian dengan melakukan modulo
+  halfy = (size1 + 1) / 2
+  median = t[halfy]
+else
   halfy1 = (size1 / 2)
   halfy2 = (size1 / 2) + 1
   median = t[halfy1] + ((t[halfy2] - t[halfy1]) / 2)
-else
-  halfy = (size1 + 1) / 2
-  median = t[halfy]
 end
 io.write("    Median: ")
 print(median)
 
-print("7. Q1, Q2, Q3")
+print("7. Kuartil")
 
-quart1 = (size1 + 1) / 4
-quart3 = (size1 + 1) / 4 * 3
-if (size1 % 2) == (0) then -- penyelesaian dengan melakukan modulo
+quart1e = (size1 + 1) / 4
+quart3e = (size1 + 1) / 4 * 3
+print("quart1e", quart1e)
+print("quart3e", quart3e)
+quart1 = math.floor(quart1e + 0.5)
+quart3 = math.floor(quart3e + 0.5)
+if (quart1e % 1) > 0.5 then
+  bulatatas1 = true
+else
+  bulatatas1 = false
+end
+if (quart3e % 1) > 0.5 then
+  bulatatas3 = true
+else
+  bulatatas3 = false
+end
+print("quart1", quart1)
+print("quart3", quart3)
+if (((size1 / 2) - ((size1 / 2) % 1)) % 2) == 0 then -- penyelesaian dengan melakukan modulo
+  if bulatatas1 == true then
+    print("riwet bulatatas Q1")
+    Q1 = (t[quart1] + t[(quart1 + 1)]) / 2
+  else
+    print("riwet bulatbawah Q1")
+    Q1 = ((t[quart1] + t[(quart1 + 1)]) / 2)
+  end
+  if bulatatas3 == true then
+    print("riwet bulatatas Q3")
+    Q3 = (t[quart3] + t[(quart3 - 1)]) / 2
+  else
+    print("riwet bulatbawah Q3")
+    Q3 = ((t[quart3 - 1] + t[(quart3)]) / 2) - 1
+  end
+else
+  print("gak riwet")
   Q1 = t[quart1]
   Q3 = t[quart3]
-else
-  Q1 = (t[quart1] + t[(quart1 + 1)]) / 2
-  Q3 = (t[quart3] + t[(quart3 + 1)]) / 2
 end
+
 
 
 io.write("    Q1: ")
 print(Q1)
 io.write("    Q2: ")
 print(median)
-io.write("    Q2: ")
+io.write("    Q3: ")
 print(Q3)
