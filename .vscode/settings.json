@@ -2,6 +2,15 @@
     "Lua.diagnostics.globals": [
         "size1",
         "sum",
-        "rata"
+        "rata",
+        "cursor",
+        "quart1",
+        "quart3",
+        "min",
+        "max",
+        "halfy1",
+        "halfy2",
+        "median",
+        "halfy"
     ]
 }
